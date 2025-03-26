@@ -1,0 +1,55 @@
+.movie {
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 220px;
+  position: relative;
+
+  img {
+    @include transition;
+    width: 220px;
+    height: 330px;
+    object-fit: cover;
+
+    &:hover {
+      @include box-shadow;
+    }
+  }
+
+  .score {
+    width: 235px;
+    @include flex-center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 290px;
+    right: -23px;
+
+    p {
+      margin: 0;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      background-color: $primary-color;
+      border: solid 3px $secondary-color;
+      color: $secondary-color;
+      @include flex-center;
+      box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    }
+  }
+
+  h5 {
+    @include transition;
+    color: $primary-color;
+    font-size: 20px;
+    margin-top: 7px;
+
+    &:hover {
+      text-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+}
